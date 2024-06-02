@@ -270,7 +270,7 @@
 
 // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
-#define DIFFICULTY_LEVEL  4 // 0:custom, 1:easy -> 5:hard (see below)
+// #define DIFFICULTY_LEVEL  4 // 0:custom, 1:easy -> 5:hard (see below)
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -435,7 +435,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 150
+    #define SPACE_REPEAT_DECAY 175
     #endif
 
 
@@ -816,6 +816,7 @@ macros {
 
     //
     // select a word (jumps to next word upon each successive invocation)
+    // normal press goes to the right, press with shift to go to the left
     //
     select_word: select_word {
         compatible = "zmk,behavior-mod-morph";
@@ -836,6 +837,7 @@ macros {
 
     //
     // extend current selection by one word
+    // normal press goes to the right, press with shift to go to the left
     //
     extend_word: extend_word {
         compatible = "zmk,behavior-mod-morph";
@@ -856,6 +858,7 @@ macros {
 
     //
     // select current line
+    // normal press goes down, press with shift to go up
     //
     select_line: select_line {
         compatible = "zmk,behavior-mod-morph";
@@ -871,11 +874,12 @@ macros {
     ZMK_MACRO(select_line_left,
         wait-ms = <SELECT_WORD_WAIT>;
         tap-ms = <SELECT_WORD_TAP>;
-        bindings = <&kp LEFT &kp LEFT &kp L&kp LG(RIGHT) &kp LS(LG(LEFT))>;
+        bindings = <&kp LEFT &kp LEFT &kp LG(RIGHT) &kp LS(LG(LEFT))>;
     )
 
     //
     // extend current selection by one line
+    // normal press goes down, press with shift to go up
     //
     extend_line: extend_line {
         compatible = "zmk,behavior-mod-morph";
@@ -916,7 +920,7 @@ macros {
             &kp EQUAL              &kp N1               &kp N2              &kp N3               &kp N4  &kp N5                                                                                                                                          &kp N6                &kp N7               &kp N8                &kp N9                  &kp N0  &kp MINUS
               &kp TAB               &kp Q                &kp W               &kp E                &kp R   &kp T                                                                                                                                           &kp Y                 &kp U                &kp I                 &kp O                   &kp P   &kp BSLH
         &mt HYPER ESC  &left_pinky LALT A  &left_ring1 LCTRL S  &left_middy LGUI D  &left_index LSHFT F   &kp G                                                                                                                                           &kp H  &right_index LSHFT J  &right_middy LGUI K  &right_ring1 LCTRL L  &right_pinky LALT SEMI    &kp SQT
-            &kp GRAVE               &kp Z                &kp X               &kp C                &kp V   &kp B  &thumb LAYER_media TAB                     &none   &none   &none                            &none                              &kp DEL   &kp N                 &kp M            &kp COMMA               &kp DOT                &kp FSLH  &kp PG_UP
+            &kp GRAVE               &kp Z                &kp X               &kp C                &kp V   &kp B  &thumb LAYER_media TAB                     &none   &none   &none                            &none                     &mt HYPER DELETE   &kp N                 &kp M            &kp COMMA               &kp DOT                &kp FSLH  &kp PG_UP
  &magic LAYER_Magic 0           &kp GLOBE              &kp END           &kp LCTRL             &kp LGUI          &thumb LAYER_nav SPACE  &thumb LAYER_morenav ESC   &none   &none  &thumb_space LAYER_number ENTER  &thumb_space LAYER_symbol BACKSPACE                      &kp RGUI            &kp RCTRL              &kp LBKT                &kp RBKT  &kp PG_DN
             >;
         };
