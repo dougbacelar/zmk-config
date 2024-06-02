@@ -548,6 +548,7 @@ macros {
 
     //
     // select a word (jumps to next word upon each successive invocation)
+    // normal press goes to the right, press with shift to go to the left
     //
     select_word: select_word {
         compatible = "zmk,behavior-mod-morph";
@@ -568,6 +569,7 @@ macros {
 
     //
     // extend current selection by one word
+    // normal press goes to the right, press with shift to go to the left
     //
     extend_word: extend_word {
         compatible = "zmk,behavior-mod-morph";
@@ -588,6 +590,7 @@ macros {
 
     //
     // select current line
+    // normal press goes down, press with shift to go up
     //
     select_line: select_line {
         compatible = "zmk,behavior-mod-morph";
@@ -608,6 +611,7 @@ macros {
 
     //
     // extend current selection by one line
+    // normal press goes down, press with shift to go up
     //
     extend_line: extend_line {
         compatible = "zmk,behavior-mod-morph";
