@@ -1,4 +1,3 @@
-// #define HYPER LALT(LC(LG(LS)))
 #define HYPER LC(LS(LG(LALT)))
 
 // NOTE: Use the `#define` settings below to customize this keymap!
@@ -26,15 +25,15 @@
 // #define DIFFICULTY_LEVEL 4 // faster (200ms)
 // #define DIFFICULTY_LEVEL 5 // expert (100ms)
 //
-#if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
-#define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
-#ifndef HOMEY_HOLDING_TIME
-#define HOMEY_HOLDING_TIME DIFFICULTY_THRESHOLD
-#endif
-#ifndef INDEX_HOLDING_TIME
-#define INDEX_HOLDING_TIME DIFFICULTY_THRESHOLD
-#endif
-#endif
+// #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
+// #define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
+// #ifndef HOMEY_HOLDING_TIME
+// #define HOMEY_HOLDING_TIME DIFFICULTY_THRESHOLD
+// #endif
+// #ifndef INDEX_HOLDING_TIME
+// #define INDEX_HOLDING_TIME DIFFICULTY_THRESHOLD
+// #endif
+// #endif
 
 behaviors {
 
@@ -524,3 +523,4 @@ behaviors {
         bindings = <&mo>, <&kp>;
     };
 };
+
