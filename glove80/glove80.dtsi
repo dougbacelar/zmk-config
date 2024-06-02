@@ -167,7 +167,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef SPACE_REPEAT_DECAY
-    #define SPACE_REPEAT_DECAY 150
+    #define SPACE_REPEAT_DECAY 175
     #endif
 
 
@@ -603,7 +603,7 @@ macros {
     ZMK_MACRO(select_line_left,
         wait-ms = <SELECT_WORD_WAIT>;
         tap-ms = <SELECT_WORD_TAP>;
-        bindings = <&kp LEFT &kp LEFT &kp L&kp LG(RIGHT) &kp LS(LG(LEFT))>;
+        bindings = <&kp LEFT &kp LEFT &kp LG(RIGHT) &kp LS(LG(LEFT))>;
     )
 
     //
